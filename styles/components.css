@@ -1,0 +1,116 @@
+/* Buttons */
+.btn {
+    height: 30px;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-umber);
+    border-radius: 4px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.action-btn {
+    background-color: var(--sage-mist);
+    border: 2px solid var(--rustic-copper);
+}
+
+.confirm-btn {
+    border: 2px solid var(--moss-shadow);
+    background-color: var(--sage-mist);
+}
+
+.cancel-btn {
+    border: 2px solid var(--adobe-clay);
+    background-color: var(--lemon-chiffon);
+}
+
+/* Form component */
+.bookcase__form {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: max(30%, 300px);
+    background-color: var(--lemon-chiffon);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 99;
+    & h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    & h3, label, input {
+        color: var(--dark-umber);
+    }
+    & label {
+        font-size: 1.2rem;
+    }
+    & label:last-of-type {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    & label:last-of-type:hover {
+        cursor: pointer;
+    }
+    & input {
+        height: 30px;
+        padding: 0 5px;
+        border: solid 2px var(--rustic-copper);
+        border-radius: 4px;
+        outline: none;
+    }
+    & input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    & input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    & .action-btns {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        & input {
+            flex: 1;
+        }
+    }
+    & .error-message {
+        position: relative;
+        top: -10px;
+        left: 5px;
+        color: var(--adobe-clay);
+    }
+}
+
+/* Book Card */
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    color: var(--lemon-chiffon);
+    background-color: var(--rustic-copper);
+    border: 2px solid var(--dark-umber);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    & h3 {
+        font-size: 1.5rem;
+        color: var(--dark-umber);
+    }
+    & p.read {
+        color: var(--moos-shadow);
+    }
+    & p.unread {
+        color: var(--adobe-clay);
+    }
+    & span.id {
+        font-size: 1rem;
+    }
+}

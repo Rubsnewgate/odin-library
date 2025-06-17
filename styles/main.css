@@ -1,0 +1,78 @@
+@import './reset.css';
+@import './colors.css';
+@import './components.css';
+
+/* Page Layout */
+#library-app {
+    display: grid;
+    grid-template-rows: 60px 1fr 30px;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: var(--lemon-chiffon);
+    background-color: var(--dark-umber);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: max(320px, 30%);
+    & img {
+        width: 10%;
+    }
+    & h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.bookcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 32px;
+}
+
+.bookcase__open-form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.bookcase__empty-status {
+    & p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: center;
+        color: var(--adobe-clay);
+    }
+}
+
+.books-collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-umber);
+    & span {
+        font-size: 1rem;
+        color: var(--lemon-chiffon);
+    }
+}
+
+/* visible-hidden status */
+.hidden {
+    display: none;
+}

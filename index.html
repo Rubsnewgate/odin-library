@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Odin Library </title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div id="library-app">
+        <header class="header">
+            <div class="logo">
+                <img src="./assets/icons/libro.png" alt="Odin library icon">
+                <h1> Odin Library </h1>
+            </div>
+
+            <div class="login">
+                <button class="action-btn btn"> Log in </button>
+            </div>
+        </header>
+
+        <section class="bookcase">
+            <div class="bookcase__open-form">
+                <button id="open-form-btn" class="action-btn btn">
+                    Add book to collection
+                </button>
+            </div>
+
+            <div class="bookcase__empty-status">
+                <p>
+                    Looks like there are no books here yet. Tap the button
+                    to add your first one!
+                </p>
+            </div>
+
+            <form class="bookcase__form hidden" action="#">
+                <h3> Add book to the library </h3>
+
+                <label for="book-title"> Title: </label>
+                <input type="text" name="title" id="book-title" required>
+                <span class="error-message title-error"></span>
+
+                <label for="book-author"> Author: </label>
+                <input type="text" name="author" id="book-author" required>
+                <span class="error-message author-error"></span>
+
+                <label for="book-pages"> Pages: </label>
+                <input type="number" name="pages" id="book-pages" required>
+                <span class="error-message pages-error"></span>
+
+                <label for="read-it">
+                    <input type="checkbox" name="read" id="read-it">
+                    Have you read it ?
+                </label>
+
+                <div class="action-btns">
+                    <input id="add-book" class="confirm-btn btn" type="button"
+                           value="Add book">
+                    <input class="cancel-btn btn" type="button" value="Cancel">
+                </div>
+            </form>
+
+            <!-- This is were each book created by the user will be injected -->
+            <div class="books-collection"></div>
+        </section>
+
+        <footer class="footer">
+            <span> Odin library </span>
+        </footer>
+    </div>
+
+    <script src="./library.js"></script>
+</body>
+</html>
